@@ -11,4 +11,5 @@ export const AppColors = {
   blueGray: "#6699cc",
   medGray: "#888888",
   borderColor: "#cccccc",
+  red: "#ff0000",
 };
