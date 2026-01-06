@@ -11,8 +11,19 @@ import SignUpScreen from "./src/screens/auth/SignUpScreen";
 import AuthStack from "./src/navigation/AuthStack";
 import { NavigationContainer } from "@react-navigation/native";
 import MainAppStack from "./src/navigation/MainAppStack";
+import { useFonts } from "expo-font";
 
 export default function App() {
+
+   const [fontsLoaded] = useFonts({
+    'Nunito-Bold': require('./src/assets/fonts/Nunito-Bold.ttf'),
+    'Nunito-Medium': require('./src/assets/fonts/Nunito-Medium.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null; // or a loading spinner
+  }
+
   return (
     <NavigationContainer>
       <SafeAreaProvider>
